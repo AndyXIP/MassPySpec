@@ -32,4 +32,4 @@ Using the data already in the directory:
 
 import masspyspec as ms<br/>
 ms.main()<br/>
-Enter file name: benzene.jdx
+Enter file name: data/benzene.jdx
