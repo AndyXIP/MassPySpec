@@ -30,6 +30,6 @@ Enter file name: [Filename]
 ### Examples
 Using the data already in the directory:
 
-import masspyspec as ms<br/>
-ms.main()<br/>
+from masspyspec import main<br/>
+main.main()<br/>
 Enter file name: data/benzene.jdx
