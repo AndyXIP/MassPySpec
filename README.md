@@ -18,10 +18,10 @@ pip install matplotlib
 
 
 ## Usage
-To get started with MassPySpec, import the package and load your MS data in JCAMP-DX format into the same folder as the program:
+To get started with MassPySpec, import the package and load your MS data in JCAMP-DX format into the data folder in the same directory as the program:
 
-import masspyspec as ms<br/>
-ms.main()
+from masspyspec import main<br/>
+main.main()
 
 You will then be prompted to enter your filename:
 
