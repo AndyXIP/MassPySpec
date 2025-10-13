@@ -1,11 +1,19 @@
 from .visualization.plotter import graph
-from .utils.utils import mass, intensity, fragment_calc
+from .utils.utils import mass, intensity
 from .core.parser import access_file
+from .core.calculator import fragment_calc
+from .core.analyzer import print_possible_formulas
 
 from .config.constants import ATOMIC_MASSES, MAX_CARBON_ATOMS, MIN_DBE
 
 
 def masspyspec(file):
+    """
+    Main function to process the mass spectrum data from a JCAMP-DX file.
+    
+    Args:
+        file (str): File name of the JCAMP-DX file in data/.
+    """
     x_values, y_values = access_file(file)
     # access and convert JCAMP-DX data to obtain x and y values
 
@@ -21,22 +29,7 @@ def masspyspec(file):
     # obtaining possible chemical formulas for different types of molecules
     
     print(f"This molecule has an atomic mass of {M_mass} amu. This means that it can have the following chemical formulas:")
-    if len(hydrocarbon) >= 1:
-        print("It can be a hydrocarbon: ")
-        for i in hydrocarbon:
-            print(i)
-    if len(oMolecule) >= 1:
-        print(f"It can contain oxygen: ")
-        for i in oMolecule:
-            print(i)
-    if len(nMolecule) >= 1:
-        print(f"It can contain nitrogen: ")
-        for i in nMolecule:
-            print(i)
-    if len(onMolecule) >= 1:
-        print(f"It can contain both oxygen and nitrogen: ")
-        for i in onMolecule:
-            print(i)
+    print_possible_formulas(hydrocarbon, oMolecule, nMolecule, onMolecule)
     # printing out each of the possible formulas for the calculated molecular mass only if it has a formula in that array.
 
     graph(x_values, y_values)
@@ -44,6 +37,7 @@ def masspyspec(file):
 
 
 def main():
+    """Run the masspyspec function with user input."""
     try:
         x = input("Enter file name: ").strip()
         masspyspec(x)

@@ -2,6 +2,14 @@ import os
 from ..utils.utils import relative
 
 def access_file(filename):
+    """
+    Access and read a JCAMP-DX file, returning mass and relative intensity data.
+
+    Args:
+        filename: Name of the JCAMP-DX file (with or without .jdx extension)
+    Returns:
+        Tuple of two lists: (masses, relative intensities)
+    """
     if not filename.endswith('.jdx'):
         filename += '.jdx'
 
