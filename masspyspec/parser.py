@@ -1,5 +1,5 @@
 import os
-from utils import relative
+from masspyspec.utils import relative
 
 def access_file(filename):
     mypath = os.path.dirname(os.path.abspath(__file__))
