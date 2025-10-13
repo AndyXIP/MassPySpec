@@ -1,9 +1,16 @@
 import os
-from masspyspec.utils import relative
+from ..utils.utils import relative
 
 def access_file(filename):
+    if not filename.endswith('.jdx'):
+        filename += '.jdx'
+
     mypath = os.path.dirname(os.path.abspath(__file__))
-    filepath = os.path.join(mypath, filename)
+
+    # Go up two directories (to project root) and into data/
+    data_dir = os.path.abspath(os.path.join(mypath, '..', '..', 'data'))
+    filepath = os.path.join(data_dir, filename)
+
     # finding current directory and desired file location within that directory
     x_values = []
     y_values = []

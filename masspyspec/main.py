@@ -1,8 +1,8 @@
-from plotter import graph
-from masspyspec.utils import mass, intensity, fragment_calc
-from parser import access_file
+from .visualization.plotter import graph
+from .utils.utils import mass, intensity, fragment_calc
+from .core.parser import access_file
 
-from config.constants import ATOMIC_MASSES, MAX_CARBON_ATOMS, MIN_DBE
+from .config.constants import ATOMIC_MASSES, MAX_CARBON_ATOMS, MIN_DBE
 
 
 def masspyspec(file):

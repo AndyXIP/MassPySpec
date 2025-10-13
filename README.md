@@ -13,23 +13,29 @@ The project file only needs to be downloaded and no installation commands are re
 ## Dependencies
 - matplotlib 3.8.0 or newer
 
-This can be installed using pip by typing the following in a terminal window:<br/>
-pip install matplotlib
+This can be installed using pip by typing the following in a terminal window:
 
+```
+pip install matplotlib
+```
 
 ## Usage
-To get started with MassPySpec, import the package and load your MS data in JCAMP-DX format into the data folder in the same directory as the program:
+To get started with MassPySpec, load your MS data in JCAMP-DX format into the data folder qnd then run the following script:
 
-from masspyspec import main<br/>
-main.main()
+```
+python -m masspyspec.main
+```
 
 You will then be prompted to enter your filename:
 
+```
 Enter file name: [Filename]
+```
 
 ### Examples
 Using the data already in the directory:
 
-from masspyspec import main<br/>
-main.main()<br/>
-Enter file name: data/benzene.jdx
+```
+python -m masspyspec.main
+Enter file name: benzene
+```
