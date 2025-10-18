@@ -1,6 +1,6 @@
 # MassPySpec
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Status](https://img.shields.io/badge/Status-Complete-success)
 ![Python](https://img.shields.io/badge/Python-3.12%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10%2B-11557c?logo=matplotlib&logoColor=white)
